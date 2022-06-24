@@ -25,6 +25,8 @@ func NewServer(conf *viper.Viper) (*Server, error) {
 		return nil, errors.Wrap(err, "add database connection")
 	}
 
+	server.setupRoutes()
+
 	server.router.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
 		writer.WriteHeader(http.StatusOK)
 		_, _ = writer.Write([]byte("Hello world!"))
@@ -35,4 +37,9 @@ func NewServer(conf *viper.Viper) (*Server, error) {
 
 func (server *Server) ListenAndServe() error {
 	return http.ListenAndServe(server.config.GetString("address"), server.router)
+}
+
+func (server *Server) setupRoutes() {
+	server.router.HandleFunc("/users/new/", server.newUserHandler)
+	server.router.HandleFunc("/users/{id}/", server.userByIDHandler)
 }
