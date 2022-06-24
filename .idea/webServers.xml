@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="67173acf-92e8-43be-8b9d-7bb620f6d612" name="prod">
+        <fileTransfer rootFolder="/go" accessType="SFTP" host="codenight.yannik-dittmar.de" port="81" sshConfigId="ff54caa2-301e-4faf-8dc4-f275f8801309" sshConfig="root@codenight.yannik-dittmar.de:81 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
