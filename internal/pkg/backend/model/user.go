@@ -20,7 +20,7 @@ type UserInput struct {
 
 type UserUpdate struct {
 	Name            string
-	TeamIDs         []uint
+	Teams           []uint
 	AssignedTaskIDs []uint
 	OwnedTasks      []uint
 }
