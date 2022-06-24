@@ -14,8 +14,8 @@ type User struct {
 }
 
 type UserInput struct {
-	Name    string
-	TeamIDs []uint
+	Name  string
+	Teams []uint
 }
 
 type UserUpdate struct {
