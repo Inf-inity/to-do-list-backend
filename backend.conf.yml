@@ -6,3 +6,8 @@ logger:
   logFileNameFormat: 2006-01-02
   logFileMode: 0644
   refreshSpec: '@daily'
+
+server:
+  address: :5853
+  db:
+    dsn: host=codenight.yannik-dittmar.de user=postgres password=todolist dbname=postgres port=5432 sslmode=disable TimeZone=Europe/Berlin

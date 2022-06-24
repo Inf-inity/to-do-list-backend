@@ -27,5 +27,7 @@ func NewApp() *App {
 		log.Panicln(err)
 	}
 
+	app.addServer()
+
 	return app
 }
