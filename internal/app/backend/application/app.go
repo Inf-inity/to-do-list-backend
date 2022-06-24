@@ -3,6 +3,7 @@ package application
 import (
 	"log"
 
+	"github.com/Inf-inity/to-do-list-backend/internal/app/backend/server"
 	"github.com/Inf-inity/to-do-list-backend/internal/pkg/application"
 	"github.com/Inf-inity/to-do-list-backend/internal/pkg/config/defaults"
 )
@@ -10,6 +11,8 @@ import (
 // App is used to bundle all application resources.
 type App struct {
 	application.DefaultApp
+
+	Server *server.Server
 }
 
 // NewApp returns a new App instance.
